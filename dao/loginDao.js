@@ -1,6 +1,6 @@
 var mysql = require('mysql');
 var config = require('../config/config');
-var pool = mysql.createPool(config);
+var pool = mysql.createPool(config.mysql);
 var loginSql = require('../sqlMap/loginSql');
 var util = require('../util/util');
 var moment = require('moment');
