@@ -1,10 +1,9 @@
 var express = require('express');
+var app = express();
 var router = express.Router();
-var loginController  = require('../controllers/loginController')
+var loginController = require('../controllers/loginController');
 
-/* GET home page. */
-router.post('/register', function(req, res, next) {
-    loginController.register(req, res, next);
-});
-
+// auth
+router.post('/', loginController.login);
+ 
 module.exports = router;

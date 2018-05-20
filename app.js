@@ -1,32 +1,38 @@
 var createError = require('http-errors');
 var express = require('express');
+var bodyParser = require('body-parser');
+var ejs = require('ejs');
+var jwt    = require('jsonwebtoken'); // 使用jwt签名
+
+
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var bodyParser = require('body-parser');
-var ejs = require('ejs');  //我是新引入的ejs插件
 
-//路由
+
+var registerRouter = require('./routes/register');
 var loginRouter = require('./routes/login');
-var indexRouter = require('./routes/index');
-
-
-
-
-
+var testRouter = require('./routes/test');
+var loginRouter = require('./routes/login');
 
 var app = express();
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }))
+// parse application/json
+app.use(bodyParser.json())
 
-// 创建 application/json 解析
-var jsonParser = bodyParser.json()
-// 创建 application/x-www-form-urlencoded 解析
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+
+
+
 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', ejs.__express);
 app.set('view engine', 'html');
+app.set('superSecret', 'myscri'); 
+
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -34,8 +40,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
- app.use('/login', loginRouter);
- app.use('/', indexRouter);
+app.use('/register', registerRouter);
+app.use('/login', loginRouter);
+
+app.use('/test', testRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
