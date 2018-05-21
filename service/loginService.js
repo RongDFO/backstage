@@ -1,7 +1,7 @@
 const loginDao = require('../dao/loginDao');
 const jwt = require('jsonwebtoken'); // 使用jwt签名
 const util = require('../util/util');
-const util = require('../config/config');
+const config = require('../config/config');
 module.exports = {
     async loginService(params){
         const loginres  = await loginDao.loginDao(params);
