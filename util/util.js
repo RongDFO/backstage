@@ -13,13 +13,11 @@ module.exports = {
         }
     },
     //判断是否为空
-    isNotEmpty: function (res, params, Strings) {
-        if (params == undefined || params == null || params == 'null' || params == 'undefined') {
-            console.log('ok')
-            return res.status(200).json({
-                code: 0,
-                data: Strings
-            })
+    isEmpty: function (params) {
+        if (params == undefined || params == null || params == 'null' || params == 'undefined'||params == '') {
+            return true
+        }else{
+            return false
         }
     },
     //随机字符串

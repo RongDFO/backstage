@@ -7,7 +7,7 @@ module.exports={
     register(params){
         return new Promise((resolve,reject)=>{
             pool.getConnection(function(err,connection){ 
-                 connection.query(registerSql.register,[params.username,params.createtime,params.password,params.status,params.usertype,params.userid,params.salt],function(err,result){
+                 connection.query(registerSql.register,[params.username,params.createtime,params.password,params.status,params.usertype,params.userid,params.salt,params.email],function(err,result){
                     if(err) throw err
                     else return resolve(result)
                  })
@@ -24,6 +24,38 @@ module.exports={
                 })
             })
         })
-       
     },
+    saveCode(params){
+        return new Promise((resolve,reject)=>{
+            pool.getConnection(function(err,connection){
+                connection.query(registerSql.saveCode,[params.code,params.isverification,params.user_id,params.expired,params.code,params.isverification,params.expired],function(err,result){
+                    if(err) throw err
+                    else
+                    return resolve(result);
+                })
+            })
+        })
+    },
+    verificateCode(params){
+        return new Promise((resolve,reject)=>{
+            pool.getConnection(function(err,connection){
+                connection.query(registerSql.verificateCode,[params.username,params.code,params.expired],function(err,result){
+                    if(err) throw err
+                    else
+                    return resolve(result);
+                })
+            })
+        })
+    },
+    modifyPassword(params){
+        return new Promise((resolve,reject)=>{
+            pool.getConnection(function(err,connection){
+                connection.query(registerSql.modifyPassword,[params.password,params.salt,params.username],function(err,result){
+                    if(err) throw err
+                    else
+                    return resolve(result);
+                })
+            })
+        })  
+    }
 }
