@@ -2,7 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var bodyParser = require('body-parser');
 var ejs = require('ejs');
-var jwt    = require('jsonwebtoken'); // 使用jwt签名
+var jwt  = require('jsonwebtoken'); // 使用jwt签名
 
 
 var path = require('path');
@@ -10,20 +10,16 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 
+var indexRouter = require('./routes/index');
 var registerRouter = require('./routes/register');
 var loginRouter = require('./routes/login');
-var testRouter = require('./routes/test');
-var loginRouter = require('./routes/login');
+
 
 var app = express();
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }))
 // parse application/json
 app.use(bodyParser.json())
-
-
-
-
 
 
 
@@ -42,8 +38,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/register', registerRouter);
 app.use('/login', loginRouter);
+app.use('/', indexRouter);
 
-app.use('/test', testRouter);
+
 
 
 // catch 404 and forward to error handler

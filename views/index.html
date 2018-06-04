@@ -1,12 +1,510 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<!-- css files -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/cobox.css" rel="stylesheet" type="text/css">
+	<link href="css/portfolio.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+	<!-- /css files -->
+	<!-- font links -->
+	<!-- <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'> -->
+	<!-- /font links -->
+	<link rel="stylesheet" href="./fonts/iconfont.css">
+	<!-- js files -->
+	<script src="js/modernizr.custom.js"></script>
+	<!-- /js files -->
 </head>
-<body>
-  index
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+	<div class="navbar-wrapper">
+		<div class="container">
+
+			<nav class="navbar navbar-inverse navbar-static-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+						 aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html">孔繁荣的个人主页</a>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse navbar-right">
+						<ul class="nav navbar-nav link-effect">
+							<li class="active">
+								<a href="#">主页</a>
+							</li>
+							<li>
+								<a href="#about">关于我</a>
+							</li>
+							<li>
+								<a href="#portfolio">我的项目</a>
+							</li>
+							<li>
+								<a href="#contact">联系我</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+		</div>
+	</div>
+	<!-- Banner -->
+	<div class="banner">
+		<ul class="rslides" id="slider">
+			<li>
+				<div class="banner-info">
+					<h3>我在做的事：</h3>
+					<span class="line1"></span>
+					<p>人生就像一杯茶，不会苦一辈子，但总会苦一阵子。</p>
+					<span class="line2"></span>
+					<div class="social-icons">
+						<a href="#">
+							<span class="iconfont icon-guge"></span>
+						</a>
+						<a href="#">
+							<span class="iconfont icon-github"></span>
+						</a>
+						<a href="#">
+							<span class="iconfont icon-youxiang"></span>
+						</a>
+
+
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="banner-info">
+					<h3>我将做的事：</h3>
+					<span class="line1"></span>
+					<p>不论你在什么时候结束，重要的是结束之后就不要悔恨</p>
+					<span class="line2"></span>
+					<div class="social-icons">
+						<a href="#">
+							<span class="iconfont icon-guge"></span>
+						</a>
+						<a href="#">
+							<span class="iconfont icon-github"></span>
+						</a>
+						<a href="#">
+							<span class="iconfont icon-youxiang"></span>
+						</a>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="banner-info">
+					<h3>我在想的事：</h3>
+					<span class="line1"></span>
+					<p>等哥有钱了，买两套房子，送他们拆一套，自己住一套</p>
+					<span class="line2"></span>
+					<div class="social-icons">
+						<a href="#">
+							<span class="iconfont icon-guge"></span>
+						</a>
+						<a href="#">
+							<span class="iconfont icon-github"></span>
+						</a>
+						<a href="#">
+							<span class="iconfont icon-youxiang"></span>
+						</a>
+					</div>
+				</div>
+			</li>
+
+		</ul>
+	</div>
+	<!-- /Banner -->
+	<!-- About -->
+	<div class="about-me" id="about">
+		<h3 class="text-center slideanim">我的技能</h3>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-xs-12">
+					<div class="mydetails slideanim text-center">
+						<img class="img-circle img-responsive" src="images/man.jpg" alt="Generic placeholder image" width="200" height="200">
+						<h3>孔繁荣</h3>
+						<p>前端开发</p>
+						<div class="social-icons">
+								<a href="#">
+										<span class="iconfont icon-guge"></span>
+									</a>
+									<a href="#">
+										<span class="iconfont icon-github"></span>
+									</a>
+									<a href="#">
+										<span class="iconfont icon-youxiang"></span>
+									</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8 col-xs-12">
+					<div class="myskills slideanim">
+						<h3 class="text-center">专业技能</h3>
+						<p class="skill-text">IT技术的学习需要持之以恒，对知识的认识深度与广度都很重要。对于前端而言更是如此，近几年前端框架层出不穷，前端技术已经从单纯的静态页面开发慢慢转变成mvc、mvvc等架构型开发，前端工程师正在渐渐向全栈工程师转变，前端开发的重中之重依然是javascript脚本的理解与应用，目前正在不断深入学习javascript知识。</p>
+						<div class="skill-info">
+							<div class="table-responsive">
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>
+												<h4>Html</h4>
+											</td>
+											<td>
+												<span class="longline1"></span>
+												<!-- <span class="shortline1"></span> -->
+											</td>
+											<td>
+												<p>95%</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<h4>Css</h4>
+											</td>
+											<td>
+												<span class="longline2"></span>
+												<!-- <span class="shortline2"></span> -->
+											</td>
+											<td>
+												<p>90%</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<h4>javaScript</h4>
+											</td>
+											<td>
+												<span class="longline3"></span>
+												<!-- <span class="shortline3"></span> -->
+											</td>
+											<td>
+												<p>80%</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<h4>jQuery</h4>
+											</td>
+											<td>
+												<span class="longline4"></span>
+												<!-- <span class="shortline4"></span> -->
+											</td>
+											<td>
+												<p>92%</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<h4>Vue</h4>
+											</td>
+											<td>
+												<span class="longline5"></span>
+												<!-- <span class="shortline5"></span> -->
+											</td>
+											<td>
+												<p>81%</p>
+											</td>
+										</tr>
+										<tr>
+												<td>
+													<h4>NodeJs</h4>
+												</td>
+												<td>
+													<span class="longline6"></span>
+													<!-- <span class="shortline6"></span> -->
+												</td>
+												<td>
+													<p>70%</p>
+												</td>
+											</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /About -->
+	<div class="tlinks">Collect from
+		<a href="http://www.cssmoban.com/">网页模板</a>
+	</div>
+	<!-- Portfolio -->
+	<div class="myportfolio" id="portfolio">
+		<h3 class="text-center slideanim">我的项目</h3>
+		<section class="vertical" id="grid3d">
+			<div class="grid-wrap">
+				<div class="grid">
+					<figure>
+						<img class="slideanim" src="images/1.jpg" alt="img01" />
+					</figure>
+					<figure>
+						<img class="slideanim" src="images/2.jpg" alt="img05" />
+					</figure>
+					<figure>
+						<img class="slideanim" src="images/3.jpg" alt="img08" />
+					</figure>
+					<figure>
+						<img class="slideanim" src="images/4.jpg" alt="img02" />
+					</figure>
+					<figure>
+						<img class="slideanim" src="images/5.jpg" alt="img04" />
+					</figure>
+					<figure>
+						<img class="slideanim" src="images/6.jpg" alt="img03" />
+					</figure>
+					<figure>
+						<img class="slideanim" src="images/7.jpg" alt="img09" />
+					</figure>
+					<figure>
+						<img class="slideanim" src="images/8.jpg" alt="img06" />
+					</figure>
+					<figure>
+						<img class="slideanim" src="images/9.jpg" alt="img07" />
+					</figure>
+				</div>
+			</div>
+			<!-- /grid-wrap -->
+			<div class="content">
+				<div>
+					<div class="content-img">
+						<img src="images/1-1.jpg" class="img-responsive" alt="my projects">
+					</div>
+					<h3 class="content-text">Classy Coming Soon</h3>
+					<p class="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+						dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+						book.
+					</p>
+				</div>
+				<div>
+					<div class="content-img">
+						<img src="images/2-2.jpg" class="img-responsive" alt="my projects">
+					</div>
+					<h3 class="content-text">404 Error Page</h3>
+					<p class="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+						dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+						book.
+					</p>
+				</div>
+				<div>
+					<div class="content-img">
+						<img src="images/3-3.jpg" class="img-responsive" alt="my projects">
+					</div>
+					<h3 class="content-text">Credit Card Validation</h3>
+					<p class="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+						dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+						book.
+					</p>
+				</div>
+				<div>
+					<div class="content-img">
+						<img src="images/4-4.jpg" class="img-responsive" alt="my projects">
+					</div>
+					<h3 class="content-text">Eshop Product Detail Widget</h3>
+					<p class="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+						dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+						book.
+					</p>
+				</div>
+				<div>
+					<div class="content-img">
+						<img src="images/5-5.jpg" class="img-responsive" alt="my projects">
+					</div>
+					<h3 class="content-text">Model Profile Widget</h3>
+					<p class="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+						dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+						book.
+					</p>
+				</div>
+				<div>
+					<div class="content-img">
+						<img src="images/6-6.jpg" class="img-responsive" alt="my projects">
+					</div>
+					<h3 class="content-text">Flat Under Construction</h3>
+					<p class="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+						dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+						book.
+					</p>
+				</div>
+				<div>
+					<div class="content-img">
+						<img src="images/7-7.jpg" class="img-responsive" alt="my projects">
+					</div>
+					<h3 class="content-text">Impressive Under Construction</h3>
+					<p class="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+						dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+						book.
+					</p>
+				</div>
+				<div>
+					<div class="content-img">
+						<img src="images/8-8.jpg" class="img-responsive" alt="my projects">
+					</div>
+					<h3 class="content-text">Profile Widget</h3>
+					<p class="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+						dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+						book.
+					</p>
+				</div>
+				<div>
+					<div class="content-img">
+						<img src="images/9-9.jpg" class="img-responsive" alt="my projects">
+					</div>
+					<h3 class="content-text">Travel Reservation Widget</h3>
+					<p class="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+						dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+						book.
+					</p>
+				</div>
+				<span class="loading"></span>
+				<span class="icon close-content"></span>
+			</div>
+		</section>
+	</div>
+
+	<div class="contact-me" id="contact">
+		<h3 class="text-center slideanim">联系我</h3>
+		<p class="text-center slideanim">有事联系我</p>
+		<div class="container">
+			<footer>
+				<div class="row">
+					<div class="col-md-6 slideanim">
+						<div class="contact-details">
+							<form action="#" method="post">
+								<div class="row">
+									<div class="col-sm-12 form-group">
+										<input class="form-control" id="name" name="name" placeholder="姓名" type="text" required>
+									</div>
+									<div class="col-sm-12 form-group">
+										<input class="form-control" id="email" name="email" placeholder="邮箱" type="email" required>
+									</div>
+								</div>
+								<textarea class="form-control" id="comments" name="comments" placeholder="问题或意见" rows="5"></textarea>
+								<br>
+								<div class="row">
+									<div class="col-sm-12 form-group">
+										<button class="btn btn-default btn-lg" type="submit">发送
+											<span class="glyphicon glyphicon-menu-right"></span>
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="col-md-6 slideanim">
+						<div class="contact-info">
+							<h4>联系方式</h4>
+							<div class="footer-info">
+								<div>
+									<i class="glyphicon glyphicon-globe"></i>
+									<p class="p1"> <a target="_blank" href="https://github.com/RongDFO">https://github.com/RongDFO</a></p>
+								</div>
+								<div>
+									<i class="glyphicon glyphicon-phone-alt"></i>
+									<p class="p1">暂不泄露了</p>
+								</div>
+								<div>
+									<i class="glyphicon glyphicon-envelope"></i>
+									<p class="p1">
+										<a href="mailto:kfr1924106306@163.com">kfr1924106306@163.com</a>
+									</p>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+
+				<a href="#myPage" title="To Top">
+					<span class="glyphicon glyphicon-chevron-up"></span>
+				</a>
+			</footer>
+		</div>
+	</div>
+	<!-- /footer -->
+	<!-- js files -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- js files for banner slider -->
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		$(window).load(function () {
+
+			// Slideshow for banner
+			$("#slider").responsiveSlides({
+				maxwidth: 1920,
+				speed: 1000
+			});
+
+
+		});
+	</script>
+	<!-- /js files for banner slider -->
+	<!-- js files for portfolio -->
+	<script src="js/classie.js"></script>
+	<script src="js/helper.js"></script>
+	<script src="js/grid3d.js"></script>
+	<script>
+		new grid3D(document.getElementById('grid3d'));
+	</script>
+	<!-- /js files for portfolio -->
+	<!-- js files for gallery -->
+	<script type="text/javascript" src="js/cobox.js"></script>
+	<!-- /js files for gallery -->
+	<!-- js for smooth scrolling -->
+
+	<script>
+		$(document).ready(function () {
+			// Add smooth scrolling to all links in navbar + footer link
+			$(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+
+				// Store hash
+				var hash = this.hash;
+
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 900, function () {
+
+					// Add hash (#) to URL when done scrolling (default click behavior)
+					window.location.hash = hash;
+				});
+			});
+		})
+
+	</script>
+	<!-- /js for smooth scrolling -->
+	<!-- js for sliding -->
+
+	<script>
+		$(window).scroll(function () {
+			$(".slideanim").each(function () {
+				var pos = $(this).offset().top;
+
+				var winTop = $(window).scrollTop();
+				if (pos < winTop + 600) {
+					$(this).addClass("slide");
+				}
+			});
+		});
+	</script>
+	<!-- /js for sliding -->
+	<!-- /js files -->
+
 </body>
+
 </html>
