@@ -11,5 +11,10 @@ module.exports = {
     async add(params){
         const data = await newsDao.add(params);
         return data;
-    }
+    },
+    async getNewsDetailList(params){
+        const data = await newsDao.getNewsDetailList(params);
+        return data;
+    },
+    
 }

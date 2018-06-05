@@ -9,6 +9,8 @@ var apiRouter = require('../util/vertoken'); // 使用jwt签名
 apiRouter.post('/getNewsClass',newsController.getNewsClass);//获取类别
 apiRouter.post('/delectNewsClassByid',newsController.delectNewsClassByid);//删除类别
 apiRouter.post('/add',newsController.add);//新增类别
+apiRouter.post('/getNewsDetailList',newsController.getNewsDetailList);
+
 module.exports = apiRouter;
 
 

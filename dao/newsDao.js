@@ -36,5 +36,18 @@ module.exports = {
                 })
             })
         }) 
-    }
+    },
+    getNewsDetailList(params){
+        return new Promise((resolve,reject)=>{
+            pool.getConnection(function (err,connection) {  
+                // params.startTime endTime  params.status
+                connection.query(newsql.getNewsDetailList,[params.status,'2015-10-20 00:00:00','2018-10-20 00:00:00'],function (err,result) {  
+                    console.log(JSON.parse(JSON.stringify(result)))
+                    if(err) throw err;
+                    else
+                    return resolve(JSON.parse(JSON.stringify(result)));
+                })
+            })
+        })
+    },
 }
