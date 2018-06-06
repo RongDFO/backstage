@@ -37,5 +37,16 @@ module.exports = {
             msg:'操作成功',
         })
       })
-    }
+    },
+    // 新闻详情
+    getNewsDetailList(req,res,next){
+      const params = req.body || req.query;
+      newsService.getNewsDetailList(params).then((data)=>{
+        util.responseJONS(res,{
+            code:1,
+            msg:'查询成功',
+            data:data
+        })
+      })
+    },
 }
