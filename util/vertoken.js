@@ -18,9 +18,9 @@ apiRoutes.use(function(req, res, next) {
         });
       } else {
         // 没有拿到token 返回错误 
-        return res.status(403).send({ 
-            success: false, 
-            message: '没有找到token.' 
+        return res.status(401).send({ 
+            code: 401, 
+            msg: '登陆过期', 
         });
       }
     });
